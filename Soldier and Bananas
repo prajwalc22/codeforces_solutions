@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+    int k, n, w;
+    cin >> k >> n >> w;
+    int total_cost = 0;
+
+    for (int i = 1; i <= w; i++)
+    {
+        int cost = k * i;
+        total_cost += cost;
+    }
+    int amount_to_pay = total_cost - n;
+    if (amount_to_pay < 0)
+    {
+        amount_to_pay = 0;
+    }
+
+    cout << amount_to_pay << endl;
+}

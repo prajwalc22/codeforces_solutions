@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+    string s;
+    cin >> s;
+
+    string vowels = "aoyeuiAOYEUI";
+
+    string result = "";
+
+    for (char ch : s)
+    {
+
+        if (vowels.find(ch) == string::npos)
+        {
+
+            result += '.';
+            result += tolower(ch);
+        }
+    }
+
+    cout << result << endl;
+}

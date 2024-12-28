@@ -1,0 +1,21 @@
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main()
+{
+    string name;
+    cin >> name;
+
+    set<char> distinct_chars(name.begin(), name.end());
+
+    if (distinct_chars.size() % 2 == 0)
+    {
+        cout << "CHAT WITH HER!" << endl;
+    }
+    else
+    {
+        cout << "IGNORE HIM!" << endl;
+    }
+}

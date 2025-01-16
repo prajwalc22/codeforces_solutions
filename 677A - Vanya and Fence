@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+    int friends, height;
+    cin >> friends >> height;
+    int min_width = 0;
+
+    for (int i = 0; i < friends; i++)
+    {
+        int friends_height;
+        cin >> friends_height;
+        if (friends_height <= height)
+        {
+            min_width++;
+        }
+        else if (friends_height >= height)
+        {
+            min_width += 2;
+        }
+    }
+
+    cout << min_width << endl;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+
+    int n;
+    cin >> n;
+
+    int max_capacity = 0;
+    int curr_passengers = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        int a, b;
+        cin >> a >> b;
+        curr_passengers -= a;
+        curr_passengers += b;
+        max_capacity = max(max_capacity, curr_passengers);
+    }
+
+    cout << max_capacity << endl;
+}
